@@ -1,13 +1,14 @@
 ﻿namespace Airport_Ticket_Booking_System;
 
 
-public record Passenger(string ID, string FirstName, string LastName, string Email, string Phone, PassengerType PassengerType, IInputValidation Validation)
+public record Passenger(string ID, string FirstName, string LastName, string Email, string Phone, PassengerType PassengerType)
 {
     private string _firstName;
     private string _lastName;
     private string _phone;
     private string _email;
     private PassengerType _type;
+    private IInputValidation Validation;
 
     public string FirstName
     {

@@ -4,7 +4,7 @@
 //var p=new PriceService();
 //Console.WriteLine(p.CalculateTotalPrice(Airlines.TurkishAirlines,FlightClass.Economy,2,2,1,Currency.USD,new DateTime(2024, 10, 02),new DateTime(2024, 01, 01)));
 
-/*var flightRepository = new FlightRepository();
+var flightRepository = new FlightRepository();
 var bookingRepository = new BookingRepository();
 var priceService = new PriceService();
 var flightService = new FlightService(flightRepository);
@@ -13,4 +13,4 @@ var passengerService = new PassengerService(bookingService, bookingRepository, f
 var managerService = new ManagerService(flightService, bookingService, bookingRepository, flightRepository);
 
 // Start application
-HomePage.ShowNavigation(bookingService, flightService, passengerService, managerService);*/
+HomePage.ShowNavigation(bookingService, flightService, passengerService, managerService);
