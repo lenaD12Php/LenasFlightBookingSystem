@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Airport_Ticket_Booking_System;
 
-namespace Airport_Ticket_Booking_System.BookingSystemModels
+public interface IBookingService
 {
-    internal class IBookingService
-    {
-    }
+    Task CreateBookingAsync(List<Passenger> passengers, Airlines airline, Flight flight, FlightClass flightClass, PaymentType paymentType,
+        DateTime bookingDate, DateTime flightDate, int numberOfAdults, int numberOfChildren, int numberOfBabies, Currency targetCurrency);
 }

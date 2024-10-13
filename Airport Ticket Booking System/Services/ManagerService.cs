@@ -3,12 +3,12 @@
 public partial class ManagerService
 {
     private readonly FlightService _flightService;
-    private readonly BookingService _bookingService;
-    private readonly BookingRepository _bookingRepository;
+    private readonly IBookingService _bookingService;
+    private readonly IBookingRepository _bookingRepository;
     private readonly FlightRepository _flightRepository;
 
 
-    public ManagerService(FlightService flightService, BookingService bookingService, BookingRepository bookingRepository, FlightRepository flightRepository)
+    public ManagerService(FlightService flightService, IBookingService bookingService, IBookingRepository bookingRepository, FlightRepository flightRepository)
     {
         _flightService = flightService;
         _bookingService = bookingService;

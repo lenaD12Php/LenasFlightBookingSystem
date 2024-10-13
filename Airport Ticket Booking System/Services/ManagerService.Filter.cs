@@ -106,7 +106,7 @@ public partial class ManagerService
         else
         {
             Console.WriteLine("No bookings found within the specified criteria.");
-            FilterBookingsAsync();
+            await FilterBookingsAsync();
         }
     }
 }

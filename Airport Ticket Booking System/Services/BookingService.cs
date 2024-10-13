@@ -1,17 +1,17 @@
 ﻿namespace Airport_Ticket_Booking_System;
 
-public class BookingService
+public class BookingService : IBookingService
 {
-    private readonly BookingRepository _bookingRepository;
-    private readonly PriceService _priceService;
+    private readonly IBookingRepository _bookingRepository;
+    private readonly IPriceService _priceService;
 
-    public BookingService(BookingRepository bookingRepository, PriceService priceService)
+    public BookingService(IBookingRepository bookingRepository, PriceService priceService)
     {
         _bookingRepository = bookingRepository;
         _priceService = priceService;
     }
 
-    public void CreateBooking(List<Passenger> passengers, Airlines airline, Flight flight, FlightClass flightClass, PaymentType paymentType,
+    public async Task CreateBookingAsync(List<Passenger> passengers, Airlines airline, Flight flight, FlightClass flightClass, PaymentType paymentType,
         DateTime bookingDate, DateTime flightDate, int numberOfAdults, int numberOfChildren, int numberOfBabies, Currency targetCurrency)
     {
         if (numberOfAdults <= 0)
@@ -28,7 +28,7 @@ public class BookingService
         var newBooking = new Booking(bookingID: bookingID, Passengers: passengers, airline,
             flight, flightClass, paymentType, totalPrice, bookingDate);
 
-        _bookingRepository.AddBookingAsync(newBooking);
+        await _bookingRepository.AddBookingAsync(newBooking);
 
         Console.WriteLine($"Booking successfully created with ID: {bookingID}");
     }

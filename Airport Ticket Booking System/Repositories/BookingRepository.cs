@@ -1,6 +1,6 @@
 ﻿namespace Airport_Ticket_Booking_System;
 
-public  class BookingRepository
+public  class BookingRepository : IBookingRepository
 {
     private readonly List<Booking> _bookings = new List<Booking>();
     private const string CSVFilePath = "bookings.csv";

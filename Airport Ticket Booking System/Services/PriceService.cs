@@ -1,6 +1,6 @@
 ﻿namespace Airport_Ticket_Booking_System;
 
-public class PriceService
+public class PriceService : IPriceService
 {
     private FlightPrice _flightPrice;
 
@@ -29,7 +29,7 @@ public class PriceService
         return updatedPrice.ConvertToCurrency(Currency.EUR, targetCurrency);
     }
 
-    private decimal AdditionalCharges(decimal basePrice, DateTime bookingDate, DateTime flightDate)
+    public decimal AdditionalCharges(decimal basePrice, DateTime bookingDate, DateTime flightDate)
     {
         int daysUntilFlight = (flightDate - bookingDate).Days;
 
@@ -69,7 +69,8 @@ public class PriceService
 
     private bool IsWeekend(DayOfWeek day) => (day == DayOfWeek.Friday) || (day == DayOfWeek.Saturday) || (day == DayOfWeek.Sunday);
 
-    public void UpdateBasePrice(Airlines airline, FlightClass flightClass, decimal? priceAdult = null, decimal? priceChild = null, decimal? priceBaby = null, Currency? currency = null)
+    public void UpdateBasePrice(Airlines airline, FlightClass flightClass, decimal? priceAdult = null, decimal? priceChild = null,
+        decimal? priceBaby = null, Currency? currency = null)
     {
         _flightPrice.UpdatePrices(airline, flightClass, priceAdult, priceChild, priceBaby, currency);
         Console.WriteLine("Base prices have been updated.");
