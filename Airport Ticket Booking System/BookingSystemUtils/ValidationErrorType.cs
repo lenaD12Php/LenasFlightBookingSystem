@@ -4,5 +4,6 @@ public enum ValidationErrorType
 {
     RequiredField,
     InvalidFormat,
-    OutOfRange
+    OutOfRange,
+    None
 }
