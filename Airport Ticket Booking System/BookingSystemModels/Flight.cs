@@ -68,4 +68,3 @@ public class Flight
     public override string ToString() => $"Flight number: {FlightNumber}, Airlines: {Airlines}, " +
         $"\nDeparture details: {DepartureAirport}, {DepartureDateTime}, \nArrival details: {ArrivalAirport}, {ArrivalDateTime}";
 }
-
