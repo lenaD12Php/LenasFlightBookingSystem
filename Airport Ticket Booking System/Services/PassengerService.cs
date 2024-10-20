@@ -1,9 +1,9 @@
-﻿namespace Airport_Ticket_Booking_System;
+﻿namespace AirportTicketBookingSystem;
 
 public class PassengerService
 {
-    private readonly BookingService _bookingService;
-    private readonly BookingRepository _bookingRepository;
+    private readonly IBookingService _bookingService;
+    private readonly IBookingRepository _bookingRepository;
     private readonly FlightService _flightService;
     private readonly FlightRepository _flightRepository;
     private readonly PassengerService _passengerService;
@@ -11,7 +11,7 @@ public class PassengerService
 
 
 
-    public PassengerService(BookingService bookingService, BookingRepository bookingRepository, FlightService flightService, FlightRepository flightRepository)
+    public PassengerService(IBookingService bookingService, IBookingRepository bookingRepository, FlightService flightService, FlightRepository flightRepository)
     {
         _bookingService = bookingService;
         _bookingRepository = bookingRepository;

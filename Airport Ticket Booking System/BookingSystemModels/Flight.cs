@@ -1,4 +1,4 @@
-﻿namespace Airport_Ticket_Booking_System;
+﻿namespace AirportTicketBookingSystem;
 
 /// <summary>
 /// To simplify the implementation, all airlines will initially have the same number of seats available for each flight class.

@@ -1,4 +1,4 @@
-﻿namespace Airport_Ticket_Booking_System;
+﻿namespace AirportTicketBookingSystem;
 
 
 public record Passenger(string ID, string FirstName, string LastName, string Email, string Phone, PassengerType PassengerType)

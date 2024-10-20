@@ -1,6 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
 
-namespace Airport_Ticket_Booking_System;
+namespace AirportTicketBookingSystem;
 
 public partial class ManagerService
 {

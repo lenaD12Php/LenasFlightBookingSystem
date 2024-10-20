@@ -1,8 +1,8 @@
-﻿namespace Airport_Ticket_Booking_System;
+﻿namespace AirportTicketBookingSystem;
 
 internal static class HomePage
 {
-    internal static void ShowNavigation(BookingService bookingService, FlightService flightService, PassengerService passengerService, ManagerService managerService)
+    internal static void ShowNavigation(IBookingService bookingService, FlightService flightService, PassengerService passengerService, ManagerService managerService)
     {
         var userRole = LoginService.GetUserRole();
 

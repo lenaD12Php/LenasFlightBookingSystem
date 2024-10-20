@@ -1,4 +1,4 @@
-﻿using Airport_Ticket_Booking_System;
+﻿namespace AirportTicketBookingSystem;
 
 public class FlightRepository
 {

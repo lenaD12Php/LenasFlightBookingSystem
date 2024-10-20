@@ -1,4 +1,4 @@
-﻿namespace Airport_Ticket_Booking_System;
+﻿namespace AirportTicketBookingSystem;
 
 /// <summary>
 /// This enum contains only the most popular airlines worldwide to make it easier for users to choose.
